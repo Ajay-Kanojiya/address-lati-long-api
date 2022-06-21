@@ -2,12 +2,13 @@ import json
 import requests
 from json2xml.utils import readfromstring
 from json2xml import json2xml
+from os.path import expanduser
 
 # Uncomment and provide the absolute path when running in unix based server.
 # config_path = expanduser('~' + "/path/config.json")
 
 # Hardcoded path of configuration file.
-config_path = r"C:\Users\Factana\Downloads\Verloop\config.json"
+config_path = expanduser('~' + '/config.json')
 
 # Reading configuration file.
 with open(config_path, "r") as open_file:
